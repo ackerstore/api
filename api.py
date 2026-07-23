@@ -1013,6 +1013,13 @@ async def process_card_async(cc, mes, ano, cvv, site_url, variant_id=None, proxy
 
 app = Flask(__name__)
 
+import logging
+
+log = logging.getLogger('werkzeug')
+log.disabled = True
+
+app.logger.disabled = True
+
 @app.route('/shopify', methods=['GET'])
 def shopify_checker():
     try:
