@@ -15,7 +15,7 @@ import functools
 print = functools.partial(print, flush=True)
 
 
-ENABLE_PRINTS = True
+ENABLE_PRINTS = False
 if not ENABLE_PRINTS:
     print = lambda *args, **kwargs: None
 
